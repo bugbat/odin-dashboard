@@ -1,0 +1,55 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 175px 4fr;
+  padding: 0;
+  margin: 0;
+}
+
+body > div {
+  padding: 1rem;
+}
+
+.sidebar {
+  background-color: blue;
+  color: white;
+  grid-row-start: span 2;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+  margin: 3rem 0rem;
+}
+
+.header {
+  background-color: red;
+
+}
+
+.main-content {
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 1.5rem;
+}
+
+.main-left {
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.main-right {
+  background-color: brown;
+}
+
+.card {
+  width: 150px;
+}
+
+h1 {
+  
+}
