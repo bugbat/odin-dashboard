@@ -58,6 +58,9 @@ body > div {
   z-index: 1;
   display: grid;
   grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .main-content {
@@ -102,31 +105,41 @@ body > div {
 
 hr {
   color: rgba(0, 0, 0, 0.164);
+  margin: 2rem 0rem;
 }
 
 p,
 ul,
 h1,
-h2 {
+h2,
+button {
   font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
   margin-top: 0;
 }
 
-p.large {
+.large {
   font-weight: 700;
   font-size: 2rem;
 }
 
+.medium {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 input.search {
-  width: 100%;
-  border-radius: 10px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 15px;
+  padding: 1rem;
+  height: 2rem;
+  border: 0;
 }
 
 /* header children */
 
 .header-top-left {
   display: grid;
-  
+  grid-template-columns: 1fr 10fr;
 }
 
 .header-top-right {
@@ -137,11 +150,19 @@ input.search {
 
 .header-bottom-left {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: ;
+  grid-template-columns: 8rem 1fr;
 }
 .header-bottom-right {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: end;
+}
+
+button {
+  border-radius: 30px;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  border: 0;
+  background-color: bisque;
 }
