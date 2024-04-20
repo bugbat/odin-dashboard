@@ -58,6 +58,12 @@ body > div {
   font-size: 1.5rem;
 }
 
+.sidebar li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .header {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -67,6 +73,7 @@ body > div {
   grid-template-rows: 1fr 2fr;
   padding-left: 3rem;
   padding-right: 3rem;
+  gap: 1rem;
 }
 
 .main-content {
@@ -98,15 +105,27 @@ body > div {
   border-left: .5rem solid var(--secondary-color);
 }
 
-.sideblock {
+.sideblock-announcements {
   background-color: white;
   border-radius: 8px;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-bottom: 1rem;
 }
 
-.announcement {
+.sideblock-trending {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
+.trending {
+  display: flex;
+  gap: 1rem;
 }
 
 hr {
@@ -120,12 +139,17 @@ h1,
 h2,
 button {
   font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
-  margin-top: 0;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
 }
 
 .large {
   font-weight: 700;
   font-size: 2rem;
+  margin: 0;
 }
 
 .medium {
@@ -145,19 +169,22 @@ input.search {
 
 .header-top-left {
   display: grid;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
 }
 
 .header-top-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: end;
+  font-weight: 700;
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  align-items: center;
 }
 
 .header-bottom-left {
   display: grid;
-  grid-template-columns: 8rem 1fr;
-  align-items: end;
+  grid-template-columns: 5rem 1fr;
+  align-items: center;
   & p {
     margin: 0;
   }
@@ -167,16 +194,56 @@ input.search {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: end;
-  align-items: end;
+  align-items: center;
 }
 
 button {
   border-radius: 30px;
-  width: 8rem;
+  width: 9rem;
   height: 3rem;
   font-size: 1.3rem;
   border: 0;
   background-color: var(--primary-color);
   color: white; 
   font-weight: 700;
+}
+
+.icon-light {
+  width: 1.5rem;
+  fill: white;
+}
+
+.icon-dark {
+  width: 1.5rem;
+  fill: black;
+}
+
+.icon-light-large {
+  width: 3rem;
+  fill: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.user-pic {
+  border-radius: 50px;
+  height: 3rem;
+  border: 2px solid var(--bg-color);
+}
+
+.user-pic-large {
+  border-radius: 50px;
+  height: 4rem;
+  border: 2px solid var(--bg-color);
 }
